@@ -1,0 +1,18 @@
+{
+  "nodes": {
+    "+typescript#1": {
+      "contentWidth": 450,
+      "rfNode": {
+        "position": {
+          "x": 420,
+          "y": 240
+        }
+      },
+      "sections": {
+        "scriptlet": {
+          "cardCollapsed": true
+        }
+      }
+    }
+  }
+}

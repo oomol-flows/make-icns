@@ -1,0 +1,55 @@
+inputs_def:
+  - handle: image
+    description: Input
+    json_schema:
+      type: string
+      ui:widget: file
+  - handle: save_dir
+    json_schema:
+      type: string
+      ui:widget: dir
+    value:
+    nullable: true
+  - handle: icon_type
+    json_schema:
+      enum:
+        - icns
+        - ico
+      ui:options:
+        labels:
+          - ICNS
+          - ICO
+    value: icns
+  - handle: interpolation
+    json_schema:
+      enum:
+        - "0"
+        - "1"
+        - "2"
+        - "3"
+        - "4"
+        - "5"
+      ui:options:
+        labels:
+          - NEAREST_NEIGHBOR
+          - BILINEAR
+          - BICUBIC
+          - BEZIER
+          - HERMITE
+          - BICUBIC2
+    value: "1"
+outputs_def:
+  - handle: icns_address
+    description: Output
+    json_schema:
+      type: string
+      ui:widget: file
+ui:
+  default_width: 450
+executor:
+  name: nodejs
+  options:
+    spawn: false
+    entry: main.ts
+title: Image To Icon
+icon: ":fa6-solid:images:"

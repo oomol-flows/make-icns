@@ -1,0 +1,13 @@
+version: 0.0.2
+scripts:
+  # Script executed when the container is first loaded
+  # eg: bootstrap: pip install pandas
+  bootstrap: |
+    npm install
+    pip install -r requirements.txt
+icon: https://package-assets.oomol.com/packages/image-to-icon/0.0.1/files/package/icon.png
+name: image-to-icon
+description: image to icns & ico
+displayName: Image To Icon
+releaseNotes: add code repo
+repository: https://github.com/oomol-flows/image-to-icon

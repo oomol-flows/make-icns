@@ -1,0 +1,13 @@
+nodes:
+  - task: self::image-to-icon
+    title: "Image To Icon #2"
+    node_id: image-to-icon#2
+    inputs_from:
+      - handle: image
+        value: /oomol-driver/oomol-storage/yyy.png
+      - handle: save_dir
+        value: /oomol-driver/oomol-storage
+      - handle: icon_type
+        value: icns
+      - handle: interpolation
+        value: "1"
