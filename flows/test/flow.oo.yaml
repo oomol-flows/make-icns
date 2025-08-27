@@ -4,10 +4,22 @@ nodes:
     node_id: image-to-icon#2
     inputs_from:
       - handle: image
-        value: /oomol-driver/oomol-storage/yyy.png
       - handle: save_dir
-        value: /oomol-driver/oomol-storage
+        value:
       - handle: icon_type
         value: icns
       - handle: interpolation
-        value: "1"
+  - node_id: +typescript#1
+    title: "TypeScript #1"
+    icon: ":skill-icons:typescript:"
+    task:
+      ui:
+        default_width: 450
+      inputs_def:
+        []
+      outputs_def:
+        []
+      executor:
+        name: nodejs
+        options:
+          entry: scriptlets/+scriptlet#1.ts

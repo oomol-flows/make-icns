@@ -1,16 +1,10 @@
 {
   "nodes": {
-    "+typescript#1": {
-      "contentWidth": 450,
+    "image-to-icon#2": {
       "rfNode": {
         "position": {
-          "x": 420,
-          "y": 240
-        }
-      },
-      "sections": {
-        "scriptlet": {
-          "cardCollapsed": true
+          "x": 204,
+          "y": -61
         }
       }
     }
