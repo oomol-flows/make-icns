@@ -27,10 +27,9 @@ type InterpolationMode = typeof INTERPOLATION_MODES[keyof typeof INTERPOLATION_M
 type Inputs = {
   image: string;
   save_dir: string | null;
-  icon_type: IconType;
-  interpolation: InterpolationMode;
+  icon_type: "icns" | "ico";
+  interpolation: number;
 };
-
 type Outputs = {
   icns_address: string;
 };
@@ -63,7 +62,7 @@ const validateInputs = (inputs: Inputs): void => {
     throw new IconGenerationError(`Unsupported icon type: ${icon_type}`);
   }
   
-  if (!Object.values(INTERPOLATION_MODES).includes(interpolation)) {
+  if (interpolation < 0 || interpolation > 5) {
     throw new IconGenerationError(`Unsupported interpolation mode: ${interpolation}`);
   }
 };
@@ -85,7 +84,7 @@ const buildOutputPath = (
 const generateIcon = async (
   inputBuffer: Buffer,
   iconType: IconType,
-  interpolation: InterpolationMode
+  interpolation: number
 ): Promise<Buffer> => {
   let output: Buffer | null = null;
   

@@ -1,4 +1,4 @@
-version: 0.0.3
+version: 0.0.4
 scripts:
   # Script executed when the container is first loaded
   # eg: bootstrap: poetry add pandas
@@ -9,5 +9,5 @@ icon: https://package-assets.oomol.com/packages/image-to-icon/0.0.1/files/packag
 name: image-to-icon
 description: image to icns & ico
 displayName: Image To Icon
-releaseNotes: add code repo
+releaseNotes: update version
 repository: https://github.com/oomol-flows/image-to-icon

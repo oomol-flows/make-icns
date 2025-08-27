@@ -52,4 +52,4 @@ executor:
     spawn: false
     entry: main.ts
 title: Image To Icon
-icon: ":fa6-solid:images:"
+icon: ":carbon:image:"

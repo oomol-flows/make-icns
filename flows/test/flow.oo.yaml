@@ -1,25 +1,12 @@
 nodes:
-  - task: self::image-to-icon
-    title: "Image To Icon #2"
-    node_id: image-to-icon#2
+  - node_id: image-to-icon#1
+    title: "Image To Icon #1"
     inputs_from:
       - handle: image
       - handle: save_dir
-        value:
+        value: null
       - handle: icon_type
         value: icns
       - handle: interpolation
-  - node_id: +typescript#1
-    title: "TypeScript #1"
-    icon: ":skill-icons:typescript:"
-    task:
-      ui:
-        default_width: 450
-      inputs_def:
-        []
-      outputs_def:
-        []
-      executor:
-        name: nodejs
-        options:
-          entry: scriptlets/+scriptlet#1.ts
+        value: "1"
+    task: self::image-to-icon
