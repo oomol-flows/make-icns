@@ -28,7 +28,7 @@ type Inputs = {
   image: string;
   save_dir: string | null;
   icon_type: "icns" | "ico";
-  interpolation: number;
+  interpolation: "0" | "1" | "2" | "3" | "4" | "5";
 };
 type Outputs = {
   icns_address: string;
@@ -62,7 +62,8 @@ const validateInputs = (inputs: Inputs): void => {
     throw new IconGenerationError(`Unsupported icon type: ${icon_type}`);
   }
   
-  if (interpolation < 0 || interpolation > 5) {
+  const interpolationNum = parseInt(interpolation as string, 10);
+  if (interpolationNum < 0 || interpolationNum > 5) {
     throw new IconGenerationError(`Unsupported interpolation mode: ${interpolation}`);
   }
 };
@@ -147,7 +148,7 @@ export default async function (
     
     // Generate icon
     logger.debug(`Generating ${icon_type.toUpperCase()} icon, interpolation mode: ${interpolation}`);
-    const iconBuffer = await generateIcon(inputBuffer, icon_type, interpolation);
+    const iconBuffer = await generateIcon(inputBuffer, icon_type, parseInt(interpolation as string, 10));
     
     // Write output file
     logger.debug(`Writing output file: ${outputPath}`);
