@@ -1,16 +1,18 @@
 inputs_def:
   - handle: image
-    description: Input
+    description: "Source image file to convert into icon format"
     json_schema:
       type: string
       ui:widget: file
   - handle: save_dir
+    description: "Directory to save the generated icon file (optional)"
     json_schema:
       type: string
       ui:widget: dir
     value:
     nullable: true
   - handle: icon_type
+    description: "Icon format type - ICNS for macOS or ICO for Windows"
     json_schema:
       enum:
         - icns
@@ -21,6 +23,7 @@ inputs_def:
           - ICO
     value: icns
   - handle: interpolation
+    description: "Image scaling interpolation method for resizing"
     json_schema:
       enum:
         - "0"
@@ -40,7 +43,7 @@ inputs_def:
     value: "1"
 outputs_def:
   - handle: icns_address
-    description: Output
+    description: "Path to the generated icon file"
     json_schema:
       type: string
       ui:widget: file
@@ -53,3 +56,6 @@ executor:
     entry: main.ts
 title: Image To Icon
 icon: ":carbon:image:"
+description: "Convert any image file into professional icon formats (ICNS for
+  macOS or ICO for Windows) with customizable interpolation methods for optimal
+  scaling quality"

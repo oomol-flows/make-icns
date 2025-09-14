@@ -1,4 +1,4 @@
-version: 0.0.2
+version: 0.0.3
 scripts:
   # Script executed when the container is first loaded
   # eg: bootstrap: poetry add pandas
@@ -7,7 +7,7 @@ scripts:
     poetry install --no-root
 icon: https://package-assets.oomol.com/packages/image-to-icon/0.0.1/files/package/icon.png
 name: make-icns
-description: image to icns & ico
-displayName: Make icns
+description: "%transform-your-images-into-professional-icons-with-just-a-few-cl%"
+displayName: "%Make icns%"
 releaseNotes: update version
 repository: https://github.com/oomol-flows/make-icns
